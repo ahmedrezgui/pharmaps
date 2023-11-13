@@ -10,7 +10,7 @@ function NavigationBar() {
     const handleKeyPress = (event) => {
       if (event.key === 'Enter') {
         // Update the URL to the desired path
-        navigate('result');
+        navigate('/result');
       }
     };
 

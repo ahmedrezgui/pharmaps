@@ -11,7 +11,7 @@ function Login() {
                 <div className="pt-40 pb-20 px-30 flex flex-col justify-center items-center" >
 
                     <div className="w-1/3 shadow-lg px-6 py-4 rounded-md">
-                        <div className="mb-4 uppercase text-green-500 font-bold uppercase ">
+                        <div className="mb-4  text-green-500 font-bold uppercase ">
                             Se connecter à votre compte
                         </div>
 
@@ -42,7 +42,7 @@ function Login() {
                                     </label>
                                     <input
                                         className=" row-span-2 h-5/6 w-full"
-                                        type="text"
+                                        type="password"
                                         name="mot de passe"
                                         placeholder='Mot de pasee'
                                     />

@@ -3,7 +3,7 @@
 import React from "react";
 import MedCard from "./medcard";
 import NavigationBar from "./header";
-import { Footer } from "flowbite-react";
+import Footer from "./Footerr"
 import PharmacieCard from "./pharmacieCard";
 
 function Inventory() {
