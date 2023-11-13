@@ -1,14 +1,16 @@
+import { Link } from "react-router-dom";
+
 function NavigationBar() {
     return (
 
 
         <>
-            <nav class="fixed w-full z-20 top-0 start-0 bg-white border-gray-200 ">
+            <nav class="fixed w-full z-20 top-0 start-0 bg-white border-gray-200 shadow-md ">
                 <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-                    <a href="" class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <Link to="/" class="flex items-center space-x-3 rtl:space-x-reverse">
                         <img src="/pharmaps-high-resolution-logo-transparent.png" width="150" height="90" alt="PharMaps" />
 
-                    </a>
+                    </Link>
                     <div class="flex md:order-2">
                         <button type="button" data-collapse-toggle="navbar-search" aria-controls="navbar-search" aria-expanded="false" class="md:hidden text-gray-500  hover:bg-gray-100  focus:outline-none focus:ring-4 focus:ring-gray-200 rounded-lg text-sm p-2.5 me-1">
                             <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
@@ -43,10 +45,10 @@ function NavigationBar() {
                         </div>
                         <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white ">
                             <li>
-                                <a href="#" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-gray-900 md:hover:text-green-500  md:p-0 " aria-current="page">Accueil</a>
+                                <Link to="/" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-gray-900 md:hover:text-green-500  md:p-0 " aria-current="page">Accueil</Link>
                             </li>
                             <li>
-                                <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-green-500 md:p-0">Mon Stock</a>
+                                <Link to="/stock" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-green-500 md:p-0">Mon Stock</Link>
                             </li>
                         </ul>
                     </div>

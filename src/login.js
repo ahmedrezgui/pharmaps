@@ -1,3 +1,4 @@
+import { Footer } from "flowbite-react";
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -10,7 +11,7 @@ function Login() {
                 <div className="pt-40 pb-20 px-30 flex flex-col justify-center items-center" >
 
                     <div className="w-1/3 shadow-lg px-6 py-4 rounded-md">
-                        <div className="mb-4 uppercase text-green-500 ">
+                        <div className="mb-4 uppercase text-green-500 font-bold uppercase ">
                             Se connecter à votre compte
                         </div>
 
@@ -49,10 +50,11 @@ function Login() {
                                 </div>
                                 <div className="grid grid-rows-3">
                                     <div className="row-span-2">
-                                        <button className=" h-3/4 w-full text-lg text-white bg-gradient-to-r from-green-800 to-green-500 " type="submit">
-                                            Se Connecter
-                                        </button>
-
+                                        <Link to="/stock">
+                                            <button className=" h-3/4 w-full text-lg text-white bg-gradient-to-r from-green-800 to-green-500 " type="submit">
+                                                Se Connecter
+                                            </button>
+                                        </Link>
                                     </div>
                                     <span className="place-self-center">pas de compte? <Link ><span className="text-green-500">Inscrivez-vous</span></Link> </span>
                                 </div>
@@ -62,6 +64,8 @@ function Login() {
                     </div>
                 </div >
             </div>
+
+            <Footer />
         </>
     )
 }

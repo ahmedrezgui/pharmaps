@@ -3,6 +3,7 @@
 import React from "react";
 import MedCard from "./medcard";
 import NavigationBar from "./header";
+import { Footer } from "flowbite-react";
 
 function Inventory() {
 
@@ -12,7 +13,7 @@ function Inventory() {
 
             <NavigationBar />
 
-            <div className="container pt-16 px-8" >
+            <div className="container pt-24 px-8" >
                 <div className="grid grid-cols-4 justify-center col-span-3">
                     <MedCard name="panadol" status="en stock" nombre="10" />
                     <MedCard name="doliprane" status="en stock" nombre="15" />
@@ -22,7 +23,7 @@ function Inventory() {
                 </div>
 
             </div>
-
+            <Footer />
         </>
     )
 
