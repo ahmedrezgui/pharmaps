@@ -1,6 +1,28 @@
 import { Link } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function NavigationBar() {
+
+  const [searchQuery, setSearchQuery] = useState('');
+  const navigate = useNavigate();
+  useEffect(() => {
+    const handleKeyPress = (event) => {
+      if (event.key === 'Enter') {
+        // Update the URL to the desired path
+        navigate('result');
+      }
+    };
+
+    // Attach the event listener when the component mounts
+    document.addEventListener('keypress', handleKeyPress);
+
+    // Remove the event listener when the component unmounts
+    return () => {
+      document.removeEventListener('keypress', handleKeyPress);
+    };
+  }, [navigate]);
+
   return (
     <>
       <nav class="fixed w-full z-20 top-0 start-0 bg-white border-gray-200 shadow-md ">
@@ -38,7 +60,8 @@ function NavigationBar() {
                   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
                 </svg>
               </div>
-              <input type="text" id="search-navbar" class="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 " placeholder="Search..." />
+              <input type="text" value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)} id="search-navbar" class="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 " placeholder="Search..." />
             </div>
             <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white ">
               <li>

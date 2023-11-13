@@ -1,7 +1,7 @@
 import NavigationBar from "./NavigationBar";
 import Product from "./Product"
 import AboutUs from "./AboutUs"
-import Footerr from "./Footerr";
+import Footer from "./Footerr";
 function App() {
   return (
     <>
@@ -11,7 +11,7 @@ function App() {
       </div>
       <div class="flex flex-col gap-2 px-8 py-3 overflow-x-hidden">
         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Les produits les plus recherchés :</h5>
-        <div class="flex flex-row gap-4 flex-wrap">
+        <div class="flex flex-row gap-4 flex-wrap px-6 ">
           <Product ProductName="Aspegic" Description="ABSidjsiojfsofjisjfsoi"></Product>
           <Product ProductName="Aspegic" Description="ABSidjsiojfsofjisjfsoi"></Product>
           <Product ProductName="Aspegic" Description="ABSidjsiojfsofjisjfsoi"></Product>
@@ -23,7 +23,7 @@ function App() {
           <Product ProductName="Aspegic" Description="ABSidjsiojfsofjisjfsoi"></Product>
         </div>
       </div>
-      <Footerr></Footerr>
+      <Footer></Footer>
 
     </>
   );

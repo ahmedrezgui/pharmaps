@@ -4,6 +4,7 @@ import React from "react";
 import MedCard from "./medcard";
 import NavigationBar from "./header";
 import { Footer } from "flowbite-react";
+import PharmacieCard from "./pharmacieCard";
 
 function Inventory() {
 
