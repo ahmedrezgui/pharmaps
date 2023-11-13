@@ -21,7 +21,6 @@ function Login() {
 
                                     <label
                                         htmlFor="email"
-
                                     >
                                         Email
                                     </label>
@@ -31,15 +30,12 @@ function Login() {
                                         name="email"
                                         placeholder='Adresse Mail'
                                     />
-
-
                                 </div>
 
                                 <div className="grid grid-rows-4 ">
 
                                     <label
                                         htmlFor="mot de passe"
-
                                     >
                                         Mot de passe
                                     </label>
